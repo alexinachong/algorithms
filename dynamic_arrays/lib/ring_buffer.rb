@@ -4,6 +4,10 @@ class RingBuffer
   attr_reader :length
 
   def initialize
+    @capacity = 8
+    @length = 0
+    @store = StaticArray.new(@capacity)
+    @start_idx = 0
   end
 
   # O(1)
